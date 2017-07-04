@@ -1,0 +1,18 @@
+extends layout
+
+block styles
+  link(rel="stylesheet" href="/stylesheets/login.css")
+
+block content
+  form(method="POST" action="/users/login").log-form
+    div.log-form-container
+      div.title-container
+        h1 Sistema Integrado de Gestion
+      div.inputs-container
+        label(for="user-input").label-user.login-control Usuario
+          input(type="text" name="user")#user-input.input-user
+        label(for="password-input").label-password.login-control Password
+          input(type="password" name="password")#password-input.input-password
+      div.footer-container
+        input(type="submit" value="Entrar") 
+    
