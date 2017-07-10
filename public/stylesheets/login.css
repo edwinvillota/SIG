@@ -18,6 +18,7 @@
   text-align: center;
   border-radius: 10px 10px 0 0;
   background-color: #4eb34f;
+  font-size: 10px;
 }
 .log-form .log-form-container .inputs-container {
   position: relative;

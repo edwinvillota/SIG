@@ -15,9 +15,13 @@ router.post('/login', function(req, res, next){
 
   User.findOne({name: name, password: password})
     .exec(function(err,user){
-      if(err) return console.log(err)
-      req.session.user = user._id
-      res.redirect('/')
+      console.log(err)
+      if(err || err !== null){
+        res.send('Credenciales Incorrectas')
+      } else {
+        req.session.user = user._id
+        res.redirect('../sig')
+      }
     })
 })
 

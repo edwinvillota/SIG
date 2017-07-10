@@ -1,4 +1,11 @@
 extends ../layout
-
+include ../menu
+block styles
+  link(rel="stylesheet" href="../stylesheets/sig/home.css")
+block nav
+  +navMenu(user)
 block content
-  h1= id
+  section.welcome-jumbotron
+    h1 Bienvenido #{user.name}
+
+  

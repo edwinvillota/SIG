@@ -11,6 +11,7 @@ var isLogged = function(req, res, next) {
           console.log(err)
           res.redirect('/')
         }
+        res.locals.user = user
         next()
       })
   } else {

@@ -1,7 +1,31 @@
 body
-  padding: 50px
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
   box-sizing border-box
+  margin 0
 
 a
   color: #00B7FF
+
+.nav-wrap
+  position relative
+  display block
+  width 100%
+  height 50px
+  background-color #1a1a1a
+  ul
+    position absolute
+    color white
+    li
+      display inline-block
+      padding 0 5px
+      cursor pointer
+      border-right solid 1px white
+      &:hover a
+        color rgb(40, 128, 69)
+      a
+        text-decoration none
+        color white
+        &:active
+        &:focus
+          outline none
+          color rgb(40, 128, 69)
